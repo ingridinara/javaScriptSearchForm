@@ -46,21 +46,13 @@ document.getElementById("searcherErrorId").textContent="La busqueda no se realiz
 sumErrors++;
 //3.acumula un error
 
-  } ////else {
-    ////searcher.classList.add("was-validated");
-    ////1.  le anado la clase is-invalid
+  } else {
+  searcher.classList.add("is-valid");
+}
 
-  ////}
+  // Sólo con propósito de testing, retorna false para visualizar los cambios en clases css
+  return false;
 
-  // confirmar que sirve esta funcion para enviar el
-  // formulario o no para el servidor, a depender de 
-  //  si esta validado o no
-   if (sumErrors > 0){
-	// si acumulas mas de cero errores es un falso o un true 
-     return false;
-    } else{
-	 	return true;
-	 }
 }
 
 //console.log(formValidation());
@@ -74,4 +66,3 @@ form.addEventListener('blur', (event) => {
 }, true);
 // te da o no el color rojo o verde de la validacion 
 // si tienes mas de un formulario 
-
